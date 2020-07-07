@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Wiki/{{title}}
+{% endblock %}
+
+{% block body %}
+    <form action="{% url 'edit' %}" method="POST">
+    {% if entry %}
+            {% csrf_token %}
+            {{ entry | safe}}
+        {% else %}
+            <h5>NO SUCH TITLE EXIST {{title}} {{entry}}</h5>
+    {% endif %}
+    <br><br>
+    <input type="submit" value="Edit">
+    </form>
+
+{% endblock %}
