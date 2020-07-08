@@ -9,10 +9,10 @@
         <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
     </head>
     <body>
-        <div class="row">
-            <div class="sidebar col-lg-2 col-md-3">
+        <div class="row" >
+            <div class="sidebar col-lg-3 col-md-4" >
                 <h2>Wiki</h2>
-                <form name="form" action="s_sub" method="POST">
+                <form class="search" name="form" action="{% url 's_sub' %}" method="POST">
                     {% csrf_token %}
                     {{form}}
                 </form>
@@ -28,7 +28,7 @@
                 {% block nav %}
                 {% endblock %}
             </div>
-            <div class="main col-lg-10 col-md-9">
+            <div class="main col-lg-9 col-md-8">
                 {% block body %}
                 {% endblock %}
             </div>

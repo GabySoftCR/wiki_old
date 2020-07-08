@@ -9,7 +9,7 @@ Django  - Framework
 Markdown2 - python
 Random - python module
 
-### Installing
+### Installing 
 
 Set enviroment
 we use the virtual environment manager Pipenv.
@@ -22,16 +22,19 @@ pipenv shell
 
 pipenv install Django
 ```
+###Start
+Change to Wiki directory 
+python manage.py runserver
 
 ### Specifications
-- Entry Page
-- Index Page
-- Search
-- New Page
-- Edit Page
-- Random Page
+- Entry Page : Displays encyclopedia entry /wiki/title
+- Index Page : List Titles in /entries folder
+- Search     : Search and display searched page or list matching results
+- New Page   : Create New Title/Page in /entries
+- Edit Page  : Any displayed page may be edited 
+- Random Page: Displays a random page from entries.
 
-Markdown to HTML Conversion
+Markdown to HTML Conversion:  Any displayed entry must ce converted to HTML 
 
 ```
 Give an example

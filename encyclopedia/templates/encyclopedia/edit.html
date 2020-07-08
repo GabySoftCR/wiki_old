@@ -5,10 +5,12 @@
 {% endblock %}
 
 {% block body %}
-    <h3>Edit Entry</h3>
-    <form action="{% url 'save' %}" method="POST">
+    <h3>Edit Page</h3>
+    <form action="{% url 'save' %}" method="POST" border="1">
         {% csrf_token %}
+        <table border="1">
         {{ form2 }}
-        <input type="submit" value=""Save">
+        <input type="submit" value="Save">
+        </table>
     </form>
 {% endblock %}

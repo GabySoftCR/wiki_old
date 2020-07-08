@@ -5,10 +5,12 @@
 {% endblock %}
 
 {% block body %}
-    <h3>Encyclopedia Add Entry</h3>
+    <h3>New Page</h3>
     <form action="{% url 'add' %}" method="POST">
         {% csrf_token %}
+        <table border="1">
         {{ form2 }}
-        <input type="submit" value=""Save">
+        <input type="submit" value="Save">
+        </table>
     </form>
 {% endblock %}

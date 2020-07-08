@@ -11,9 +11,9 @@ h1 {
     margin-top: 0px;
     padding-top: 20px;
 }
-textarea {
-    height: 90vh;
-    width: 80%;
+Textarea {
+    height: 80vh;
+
 }
 
 .main {
@@ -24,6 +24,7 @@ textarea {
     width: 100%;
     font-size: 15px;
     line-height: 15px;
+    margin: 15px;
 }
 
 .sidebar {
@@ -34,4 +35,9 @@ textarea {
 
 .sidebar h2 {
     margin-top: 5px;
+    margin: 15px;
 }
+
+.sidebar div {
+    margin: 15px;
+    }

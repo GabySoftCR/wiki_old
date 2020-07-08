@@ -15,7 +15,10 @@ class SForm(forms.Form):
 
 class NewForm(forms.Form):
     title = forms.CharField(label="Title", max_length=50)
-    text = forms.CharField(label="Content:", widget=forms.Textarea(attrs={"rows":25, "cols":20}))
+    text = forms.CharField(label="Content:", widget=forms.Textarea(attrs={"rows":15, "cols":80}))
+
+err1 = "PAGE NOT FOUND (404)"
+err2 = "BAD REQUEST - PAGE ALREADY EXISTS (400)"
 
 def index(request):
     return render(request, "encyclopedia/index.html", {
@@ -30,21 +33,29 @@ def read_entry(request, title):
             request.session["entry"] = entry
             return render(request, "encyclopedia/md.html", {
             "entry": markdown(entry),
-            "title": title
+            "title": title,
+            "form": SForm(),
             })
         return render(request, "encyclopedia/err.html", {
-        "message": "Page Not Found"
-})
+            "form": SForm(),
+            "message": err1
+        })
+
 def s_sub(request):
     if request.method == "POST":
         form = SForm(request.POST)
         if form.is_valid():
             q = form.cleaned_data["q"]
             entries = util.list_entries()
-            if q in entries:
+            entries_up = [x.upper() for x in entries]
+            if (q.upper() in entries_up):
+                entry = util.get_entry(q)
+                request.session["title"] = q
+                request.session["entry"] = entry
                 return render(request, "encyclopedia/md.html", {
-                    "entry": markdown(util.get_entry(q)),
-                    "title": q
+                    "entry": markdown(entry),
+                    "title": q,
+                    "form": SForm()
                 })
             else:
                 sstring = []
@@ -52,6 +63,11 @@ def s_sub(request):
                     lentry = entry.lower()
                     if lentry.find(q.lower()) != -1:
                         sstring.append(entry)
+                if len(sstring) == 0:
+                    return render(request, "encyclopedia/err.html", {
+                        "form": SForm(),
+                        "message": err1
+                    })
                 return render(request, "encyclopedia/index.html", {
                     "entries": sstring,
                     "form": form
@@ -70,18 +86,27 @@ def add(request):
             text = form.cleaned_data["text"]
             if util.get_entry(title):
                 return render(request, "encyclopedia/err.html", {
-                    "message": "Entry already Exist - Use EDIT"
+                    "message": err2,
+                    "form": SForm()
                 })
             else:
                 util.save_entry(title, text)
+                request.session["title"] = title
+                request.session["entry"] = text
+                return render(request, "encyclopedia/md.html", {
+                    "form": SForm(),
+                    "title": request.session["title"],
+                    "entry": markdown(text)
+                })
                 return render(request, "encyclopedia/add.html",{
                     "form": SForm(),
                     "form2": NewForm()
                 })
-    return render(request, "encyclopedia/add.html", {
-        "form": SForm(),
-        "form2": NewForm (initial={"title": "Entry Name", "text": "#Title\n\nContent"})
-    })
+    else:
+        return render(request, "encyclopedia/add.html", {
+            "form": SForm(),
+            "form2": NewForm (initial={"text": "# Title\n\nContent"})
+        })
 
 def edit(request):
     data = {"title": request.session["title"],
@@ -89,6 +114,7 @@ def edit(request):
             }
     f = NewForm(data)
     return render(request, "encyclopedia/edit.html", {
+        "form": SForm(),
         "form2": f
     })
 
@@ -112,7 +138,8 @@ def rand(request):
     entry = util.get_entry(title)
     return render(request, "encyclopedia/md.html", {
         "entry": markdown(entry),
-        "title": title
+        "title": title,
+        "form": SForm()
     })
 
 def markdown(value):
