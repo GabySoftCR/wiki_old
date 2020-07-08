@@ -12,7 +12,7 @@ h1 {
     padding-top: 20px;
 }
 Textarea {
-    height: 80vh;
+    height: 70vh;
 
 }
 
@@ -40,4 +40,8 @@ Textarea {
 
 .sidebar div {
     margin: 15px;
+    }
+
+.messages {
+    background-color: #99bfa3;
     }

@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 from . import util
 import random
+from django.contrib import messages
 try:
     import markdown2 as md
 except ImportError:
@@ -17,8 +18,8 @@ class NewForm(forms.Form):
     title = forms.CharField(label="Title", max_length=50)
     text = forms.CharField(label="Content:", widget=forms.Textarea(attrs={"rows":15, "cols":80}))
 
-err1 = "PAGE NOT FOUND (404)"
-err2 = "BAD REQUEST - PAGE ALREADY EXISTS (400)"
+err1 = "PAGE/SEARCH NOT FOUND (404)"
+err2 = "BAD REQUEST (400) - PAGE ALREADY EXISTS - CHANGE OR EDIT"
 
 def index(request):
     return render(request, "encyclopedia/index.html", {
@@ -36,9 +37,9 @@ def read_entry(request, title):
             "title": title,
             "form": SForm(),
             })
-        return render(request, "encyclopedia/err.html", {
+        messages.add_message(request, messages.WARNING, err1)
+        return render(request, "encyclopedia/index.html", {
             "form": SForm(),
-            "message": err1
         })
 
 def s_sub(request):
@@ -64,9 +65,9 @@ def s_sub(request):
                     if lentry.find(q.lower()) != -1:
                         sstring.append(entry)
                 if len(sstring) == 0:
-                    return render(request, "encyclopedia/err.html", {
+                    messages.add_message(request, messages.INFO, err1)
+                    return render(request, "encyclopedia/index.html", {
                         "form": SForm(),
-                        "message": err1
                     })
                 return render(request, "encyclopedia/index.html", {
                     "entries": sstring,
@@ -85,8 +86,9 @@ def add(request):
             title = form.cleaned_data["title"]
             text = form.cleaned_data["text"]
             if util.get_entry(title):
-                return render(request, "encyclopedia/err.html", {
-                    "message": err2,
+                messages.add_message(request, messages.WARNING, err2)
+                return render(request, "encyclopedia/add.html", {
+                    "form2": form,
                     "form": SForm()
                 })
             else:
