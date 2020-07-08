@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4e0c6da2-3121-445b-9d9f-779ff6d6478f" name="Default Changelist" comment="Upload">
+      <changelist_data name="Gabriela Pacheco P" email="" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/encyclopedia/static/encyclopedia/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/encyclopedia/static/encyclopedia/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/encyclopedia/templates/encyclopedia/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/encyclopedia/templates/encyclopedia/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/encyclopedia/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/encyclopedia/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entries/sql.md" beforeDir="false" afterPath="$PROJECT_DIR$/entries/sql.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Gabriela Pacheco P" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eCONCbDl5ghcN9Q0cNCCYoc6xU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/encyclopedia/static/encyclopedia" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/encyclopedia/static/encyclopedia" />
+      <recent name="$PROJECT_DIR$/encyclopedia/templates/encyclopedia" />
+      <recent name="$PROJECT_DIR$/encyclopedia" />
+      <recent name="$PROJECT_DIR$/entries" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e0c6da2-3121-445b-9d9f-779ff6d6478f" name="Default Changelist" comment="" />
+      <changelist id="" name="New changelist" comment="" />
+      <created>1593822065336</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593822065336</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upload" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="150" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594081905957">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="150" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1594081905957" />
+    <state x="484" y="309" key="Github.ShareDialog" timestamp="1594081998998">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="484" y="309" key="Github.ShareDialog/0.23.1440.877@0.23.1440.877" timestamp="1594081998998" />
+    <state x="517" y="73" key="Github.UntrackedFilesDialog" timestamp="1594082028058">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="517" y="73" key="Github.UntrackedFilesDialog/0.23.1440.877@0.23.1440.877" timestamp="1594082028058" />
+    <state x="469" y="294" key="VCS.EditChangelistDialog" timestamp="1594081699642">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="469" y="294" key="VCS.EditChangelistDialog/0.23.1440.877@0.23.1440.877" timestamp="1594081699642" />
+    <state x="388" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594081888416">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="388" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1594081888416" />
+  </component>
+</project>
