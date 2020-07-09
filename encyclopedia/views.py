@@ -1,5 +1,4 @@
 from django import forms
-from django.http import HttpResponse
 from django.shortcuts import render
 
 from . import util
@@ -73,7 +72,7 @@ def s_sub(request):
                     "entries": sstring,
                     "form": form
                 })
-        return render(request, "encyclopedia/subs.html", {
+        return render(request, "encyclopedia/index.html", {
             "q": form
             })
     else:
@@ -100,10 +99,7 @@ def add(request):
                     "title": request.session["title"],
                     "entry": markdown(text)
                 })
-                return render(request, "encyclopedia/add.html",{
-                    "form": SForm(),
-                    "form2": NewForm()
-                })
+
     else:
         return render(request, "encyclopedia/add.html", {
             "form": SForm(),
